@@ -2,7 +2,7 @@
 
 Repositório dedicado ao trabalho complementar da matéria de Conversão Eletromecânica do curso de Engenharia Elétrica da UFCG.
 
-A resolução será composta de um Notebook Jupyter para análise dos dados fornecidos utilizando as bibliotecas NumPy, SciPy e Plotly.
+A resolução será composta de um Notebook Jupyter para análise dos dados fornecidos utilizando as bibliotecas NumPy, SciPy e Matplotlib.
 
 Os integrantes desse grupo são:
 
