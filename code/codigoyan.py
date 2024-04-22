@@ -122,7 +122,9 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-I_max = (f(1.8)*lf + ((1.8*area_ferro)/(area_ferro)/u0)(g))/n
+H_max = f(1.8)
+
+I_max = (H_max*lf + ((1.8*area_ferro)/(area_ferro)/u0)*(g))/n
 
 print(I_max)
 
@@ -202,7 +204,7 @@ plt.subplot(2, 2, 2).set_title("Caso Real - Torque")
 plt.subplot(2, 2, 4).set_title("Caso Ideal - Torque")
 
 
-
+## Funciona tudo até aqui 
 
 
 i = 0
