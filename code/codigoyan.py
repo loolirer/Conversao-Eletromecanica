@@ -50,7 +50,7 @@ u0 = 4*np.pi*1e-7
 indice = 0
 theta = (np.radians(np.array([-29.9, -20, -10, 0, 10, 20, 29.9])))   # ângulos em radianos
 modulo_theta = np.array([])
-area_ar = np.array(100)
+area_ar = np.array([])
 
 #area do ferro constante
 area_ferro = D*r*((np.pi)/6)
@@ -68,8 +68,9 @@ while indice < 7:
     modulo_theta = np.append(modulo_theta, [np.abs(theta[indice])])
     #area do ar que varia com o theta
     area_ar = np.append(area_ar, (D*r*(((np.pi)/6)-modulo_theta[indice])))
+    #print(area_ar)
     add = 0
-    for i in np.arange(0, 1.816, 0.01834):
+    for i in np.arange(0, 1.816, 0.01834): # 1.816 = valor maximo de B
       #fluxo concatenado do ferro
       B_ar[indice][add] = (i*area_ferro)/(area_ar[indice])
       flux_conc_ferro[indice][add] =  ((n*area_ar[indice])*(B_ar[indice][add]))
@@ -83,7 +84,7 @@ while indice < 7:
     # Incrementamos o contador em 1 a cada iteração
     indice += 1
 
-#print((B_ar))
+print((B_ar))
 #print(flux_conc_ferro)
 #print(corrente)
 
@@ -109,18 +110,26 @@ plt.figure(figsize=(14, 7))
 # Para cada ângulo, plotamos o gráfico da corrente real
 for j in range(7):
     plt.plot(corrente[j], flux_conc_ferro[j], '-', label=f'Ângulo {np.degrees(theta[j]):.1f}° - Corrente Real')
+    plt.xlabel('Corrente (A)')
+    plt.ylabel('Fluxo de Concentração de Ferro')
+    plt.xlim([-0.1,50])
+    plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 # Para cada ângulo, plotamos o gráfico da corrente ideal
 for j in range(7):
     plt.plot(correnteid[j], flux_conc_ferro[j], '--', label=f'Ângulo {np.degrees(theta[j]):.1f}° - Corrente Ideal')
+    plt.xlabel('Corrente (A)')
+    plt.ylabel('Fluxo de Concentração de Ferro')
+    plt.xlim([-0.1,50])
+    plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
-plt.xlabel('Corrente (A)')
-plt.ylabel('Fluxo de Concentração de Ferro')
-plt.xlim([-0.1,50])
-plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
-plt.legend()
-plt.grid(True)
-plt.show()
+#
 
 H_max = f(1.8)
 
