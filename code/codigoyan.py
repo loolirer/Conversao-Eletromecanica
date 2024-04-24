@@ -110,24 +110,24 @@ plt.figure(figsize=(14, 7))
 # Para cada ângulo, plotamos o gráfico da corrente real
 for j in range(7):
     plt.plot(corrente[j], flux_conc_ferro[j], '-', label=f'Ângulo {np.degrees(theta[j]):.1f}° - Corrente Real')
-    plt.xlabel('Corrente (A)')
-    plt.ylabel('Fluxo de Concentração de Ferro')
-    plt.xlim([-0.1,50])
-    plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+plt.xlabel('Corrente (A)')
+plt.ylabel('Fluxo de Concentração de Ferro')
+plt.xlim([-0.1,50])
+plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
+plt.legend()
+plt.grid(True)
+plt.show()
 
 # Para cada ângulo, plotamos o gráfico da corrente ideal
 for j in range(7):
     plt.plot(correnteid[j], flux_conc_ferro[j], '--', label=f'Ângulo {np.degrees(theta[j]):.1f}° - Corrente Ideal')
-    plt.xlabel('Corrente (A)')
-    plt.ylabel('Fluxo de Concentração de Ferro')
-    plt.xlim([-0.1,50])
-    plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+plt.xlabel('Corrente (A)')
+plt.ylabel('Fluxo de Concentração de Ferro')
+plt.xlim([-0.1,50])
+plt.title('Fluxo concatenado na Bobina 1 em função da Corrente aplicada')
+plt.legend()
+plt.grid(True)
+plt.show()
 
 #
 
