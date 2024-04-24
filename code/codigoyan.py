@@ -129,7 +129,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-#
+
 
 H_max = f(1.8)
 
@@ -171,7 +171,7 @@ for t in range(len(intervalos_theta)):
   # Definindo o vetor energia integrando o fluxo
   Wc_real.append(sp.integrate.trapezoid(fluxo_conc_real, I_intervalo))
   Wc_ideal.append(sp.integrate.trapezoid(fluxo_conc_ideal, I_intervalo))
-  # print(f'Energia real: {sp.integrate.trapezoid(Iint, λ_real)}, Energia ideal: {sp.integrate.trapezoid(Iint, λ_ideal)}')
+  print(f'Energia real: {sp.integrate.trapezoid(fluxo_conc_real, I_intervalo)}, Energia ideal: {sp.integrate.trapezoid(fluxo_conc_ideal, I_intervalo)}')
 
 Wc_real = np.array(Wc_real)
 Wc_ideal = np.array(Wc_ideal)
@@ -211,6 +211,7 @@ plt.ylabel("Torque, (T)")
 
 plt.subplot(2, 2, 2).set_title("Caso Real - Torque")
 plt.subplot(2, 2, 4).set_title("Caso Ideal - Torque")
+plt.show()
 
 
 ## Funciona tudo até aqui 
