@@ -1,4 +1,4 @@
-# Conversão Eletromecânica
+# Conversão Eletromecânica 🧲
 
 Repositório dedicado ao trabalho complementar da matéria de Conversão Eletromecânica do curso de Engenharia Elétrica da UFCG.
 
