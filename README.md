@@ -6,7 +6,6 @@ A resolução será composta de um Notebook Jupyter para análise dos dados forn
 
 Os integrantes desse grupo são:
 
-Os integrantes desse grupo são:
 - André Victor Oliveira Cadena ([@AndreCadena](https://github.com/AndreCadena))
 - Fábio Augusto Almeida Marçal ([@Fabiom02](https://github.com/Fabiom02))
 - Gabriel Nazario Gonçalves ([@GNazarioG](https://github.com/gabriel-nazario))
